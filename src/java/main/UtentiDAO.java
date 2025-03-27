@@ -36,4 +36,19 @@ public void registration(Utenti bean, ConnectionManager conn) throws SQLExceptio
     currentCon.close();
 }
 
+    public void delete(String username, ConnectionManager conn) throws SQLException{
+        String del = "DELETE FROM utenti where username='"+username+"'";
+        currentCon=conn.getConnection();
+        Statement stmt = null;
+        try{
+            stmt=currentCon.createStatement();
+            stmt.executeUpdate(del);
+        }
+        catch(SQLException err){
+            System.out.println("Eccezione: "+err);
+        }
+        stmt.close();
+        currentCon.close();
+    }
+
 }

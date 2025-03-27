@@ -4,9 +4,17 @@
         <servlet-name>RegistrazioneUtente</servlet-name>
         <servlet-class>servlets.RegistrazioneUtente</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EliminazioneUtente</servlet-name>
+        <servlet-class>servlets.EliminazioneUtente</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegistrazioneUtente</servlet-name>
         <url-pattern>/RegistrazioneUtente</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminazioneUtente</servlet-name>
+        <url-pattern>/EliminazioneUtente</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
